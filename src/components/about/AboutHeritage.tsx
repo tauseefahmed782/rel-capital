@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import heritageIcon from "@/assets/icon-heritage.svg";
 
 const groupCompanies = [
   ["REL Capital", "Dubai", true],
@@ -11,28 +13,28 @@ const groupCompanies = [
 
 export function AboutHeritage() {
   return (
-    <section className="bg-[#f7f6f4] px-6 py-20 lg:px-12 lg:py-28">
-      <div className="mx-auto grid max-w-[1240px] items-center gap-14 lg:grid-cols-2 lg:gap-20">
-        <div className="rounded-[22px] border border-slate-200 bg-white px-8 py-9 shadow-sm sm:px-10">
-          <p className="text-center text-sm font-bold uppercase tracking-wide text-slate-400">Group Structure</p>
-          <div className="mx-auto mt-6 w-fit rounded-xl bg-[#112a4b] px-6 py-3 text-center text-base font-semibold text-white">Rural Enhancers Group</div>
-          <div className="mx-auto h-6 w-px bg-slate-300" />
-          <div className="grid grid-cols-2 gap-3">
+    <section className="bg-[#f8f7f5] px-5 py-14 sm:px-0 sm:py-[100px]">
+      <div className="mx-auto grid max-w-[1120px] items-center gap-[26px] sm:grid-cols-[480px_568px] sm:gap-[72px]">
+        <div className="order-2 rounded-lg border border-[#e4e8ef] bg-white px-[18px] py-[22px] sm:order-1 sm:h-[513px] sm:px-8 sm:py-[34px]">
+          <p className="text-center text-[12px] font-semibold tracking-[.48px] text-[#98a4b6]">GROUP STRUCTURE</p>
+          <div className="mx-auto mt-[18px] w-fit rounded-[10px] bg-[#122745] px-[22px] py-[13px] text-center text-[14px] font-semibold text-white sm:text-[15px]">Rural Enhancers Group</div>
+          <div className="mx-auto h-[18px] w-px bg-[#c9d2df] sm:h-5" />
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-3">
             {groupCompanies.map(([name, location, active]) => (
-              <div key={name} className={`min-h-24 rounded-xl border p-4 ${active ? "border-[#f56619] bg-white" : "border-slate-200 bg-[#f7f7f6]"}`}>
-                <p className="text-sm font-bold leading-4 text-[#112a4b]">{name}</p>
-                <p className={`mt-1 text-sm ${active ? "text-[#f56619]" : "text-neutral-500"}`}>{location}</p>
+              <div key={name} className={`h-[60px] rounded-[9px] border px-[15px] py-3 sm:h-[95px] sm:p-[12px_14px] ${active ? "border-[1.5px] border-[#e8611a] bg-white" : "border-[#dfe4ec] bg-[#f8f7f5]"}`}>
+                <p className="text-[13px] font-semibold leading-4 text-[#122745]">{name}</p>
+                <p className={`mt-[3px] text-[11.5px] leading-[14px] ${active ? "text-[#e8611a]" : "text-[#636363]"}`}>{location}</p>
               </div>
             ))}
           </div>
         </div>
 
-        <div>
-          <p className="flex items-center gap-2 text-sm font-medium text-[#f56619]"><span aria-hidden="true">♙</span> Our Heritage</p>
-          <h2 className="mt-5 max-w-3xl text-4xl font-medium leading-tight tracking-tight text-[#112a4b] sm:text-5xl">Backed by a Group with a proven track record.</h2>
-          <p className="mt-8 border-l-[3px] border-[#f56619] pl-4 text-xl font-medium leading-7 text-[#112a4b]">“Driven By Purpose” is not a tagline we inherited. It is the mandate we finance against.</p>
-          <p className="mt-7 max-w-2xl text-base leading-7 text-neutral-600">Rural Enhancers is a holistic, purpose-driven investment group operating across India, Dubai, and the Netherlands, with a focus on healthcare and infrastructure delivered through ECA-based financing and public-private partnerships. The Group has facilitated landmark projects including India&apos;s first ECA-backed hospital. REL Capital is the Group&apos;s dedicated financial arm — the specialist team that designs and executes the capital structures behind these projects.</p>
-          <Link href="/track-record" className="mt-7 inline-block rounded-full bg-[#f56619] px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-[#d9510d]">See our track record</Link>
+        <div className="order-1 sm:order-2">
+          <p className="flex items-center gap-2 text-[14px] text-[#e8611a] sm:text-[15.5px]"><Image src={heritageIcon} alt="" className="size-5 shrink-0" /> Our Heritage</p>
+          <h2 className="mt-4 text-[30px] font-medium leading-9 text-[#122745] sm:mt-6 sm:text-[54px] sm:leading-[64px]">Backed by a Group with a proven track record.</h2>
+          <p className="mt-4 border-l-[3px] border-[#e8611a] pl-[14px] text-[15px] font-medium leading-[1.5] text-[#122745] sm:mt-6 sm:text-[18px] sm:leading-[27px]">“Driven By Purpose” is not a tagline we inherited. It is the mandate we finance against.</p>
+          <p className="mt-4 text-[14px] leading-[1.74] text-[#636363] sm:mt-6 sm:text-[16px]">Rural Enhancers is a holistic, purpose-driven investment group operating across India, Dubai, and the Netherlands, with a focus on healthcare and infrastructure delivered through ECA-based financing and public-private partnerships. The Group has facilitated landmark projects including India&apos;s first ECA-backed hospital. REL Capital is the Group&apos;s dedicated financial arm — the specialist team that designs and executes the capital structures behind these projects.</p>
+          <Link href="/track-record" className="mt-4 inline-block rounded-full bg-[#e8611a] p-4 text-[14px] font-medium text-white sm:mt-6 sm:px-[30px] sm:text-[16px]">See our track record</Link>
         </div>
       </div>
     </section>

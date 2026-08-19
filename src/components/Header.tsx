@@ -19,13 +19,13 @@ export function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="bg-[#112a4b] text-white">
-      <div className="mx-auto flex min-h-22 max-w-[1460px] items-center justify-between gap-8 px-6 lg:px-12">
+    <header className="bg-[#122745] text-white">
+      <div className="mx-auto flex h-[62px] max-w-[1120px] items-center justify-between gap-8 px-5 sm:h-[67px] sm:px-0">
         <Link href="/" aria-label="Rural Enhancers home" className="shrink-0">
-          <Image src={logo} alt="Rural Enhancers" priority className="h-16 w-68 object-contain" />
+          <Image src={logo} alt="Rural Enhancers" priority className="h-[26px] w-[126px] object-contain sm:h-[33px] sm:w-[161px]" />
         </Link>
 
-        <nav aria-label="Primary navigation" className="hidden items-center gap-12 lg:flex">
+        <nav aria-label="Primary navigation" className="hidden items-center gap-6 lg:flex">
           {navigation.map((item) => (
             <Link
               key={item.href}
@@ -41,22 +41,25 @@ export function Header() {
 
         <Link
           href="/contact"
-          className="hidden rounded-full bg-white px-12 py-3 text-[16px] font-normal text-[#112a4b] transition-transform hover:scale-[1.02] lg:block"
+          className="hidden w-[133px] rounded-full bg-white px-4 py-[10px] text-center text-[15.3px] text-[#122745] lg:block"
         >
           Contact
         </Link>
 
+        <div className="ml-auto flex items-center gap-[14px] lg:hidden">
+        <Link href="/contact" className="rounded-full bg-white px-4 py-[10px] text-[14px] leading-[18px] text-[#122745]">Contact</Link>
         <button
           type="button"
           onClick={() => setMenuOpen((open) => !open)}
           aria-expanded={menuOpen}
           aria-label="Toggle navigation menu"
-          className="rounded p-2 text-2xl lg:hidden"
+          className="p-0 text-2xl"
         >
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" className="size-7">
-            <path d="M4 7h16M4 12h16M4 17h16" />
+          <svg viewBox="0 0 24 18" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" className="h-[18px] w-6">
+            <path d="M0 1h24M0 8h24M8 15h16" />
           </svg>
         </button>
+        </div>
       </div>
 
 

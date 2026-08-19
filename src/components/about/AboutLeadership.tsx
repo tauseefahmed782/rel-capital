@@ -1,23 +1,27 @@
 import Image from "next/image";
 import leadershipPortrait from "@/assets/leadership-placeholder.png";
+import leadershipIcon from "@/assets/icon-leadership.svg";
 
 export function AboutLeadership() {
   return (
-    <section className="bg-[#fff] px-6 py-20 lg:px-12 lg:py-28">
-      <div className="mx-auto max-w-[1240px]">
-        <p className="flex items-center gap-2 text-sm font-medium text-[#f56619]"><span aria-hidden="true">↗</span> Leadership</p>
-        <h2 className="mt-5 max-w-3xl text-4xl font-medium leading-tight tracking-tight text-[#112a4b] sm:text-5xl">Experienced hands on complex capital.</h2>
-        <p className="mt-5 max-w-4xl text-lg leading-7 text-neutral-600">REL Capital is led by a team combining decades of experience in project finance, government partnerships, export-credit structuring, and healthcare and infrastructure delivery.</p>
+    <section className="bg-white px-5 py-14 sm:px-0 sm:py-[100px]">
+      <div className="mx-auto max-w-[1120px]">
+        <p className="flex items-center gap-2 text-sm font-medium text-[#e8611a]"><Image src={leadershipIcon} alt="" className="" width={20} height={20} /> Leadership</p>
+        <h2 className="mt-3 max-w-[760px] text-[30px] font-medium leading-9 text-[#122745] sm:mt-5 sm:text-[54px] sm:leading-[64px]">Experienced hands on complex capital.</h2>
+        <p className="mt-5 max-w-[760px] text-[15px] leading-[1.62] text-[#636363] sm:text-[17px]">REL Capital is led by a team combining decades of experience in project finance, government partnerships, export-credit structuring, and healthcare and infrastructure delivery.</p>
 
-        <div className="mt-12 grid items-start gap-10 lg:grid-cols-[334px_1fr] lg:gap-12">
-          <Image src={leadershipPortrait} alt="Leadership team member placeholder" className="h-[430px] w-full rounded-2xl object-cover lg:h-[500px]" />
-          <div className="pt-1">
-            <h3 className="text-3xl font-semibold tracking-tight text-[#112a4b]">Ambar Ayade</h3>
-            <p className="mt-3 font-semibold text-[#f56619]">Managing Director &amp; CEO, Rural Enhancers Group</p>
-            <p className="mt-5 max-w-3xl text-base leading-7 text-neutral-600">Facilitator of India&apos;s first ECA-backed hospital; an integral part of the Maharashtra Chief Minister&apos;s “Country Desk” foreign-investment initiative since 2021, focused on bringing ECA-based investment to the state.</p>
-            <div className="mt-5 rounded-lg border border-slate-200 bg-[#f7f6f4] px-6 py-5 text-neutral-600">
-              <p className="font-semibold text-[#112a4b]">Team expanding</p>
-              <p className="mt-1 text-sm leading-6">Full leadership bios — finance leadership and partner-institution representatives — are being finalized and will be published here.</p>
+        <div className="mt-[26px] grid items-start gap-5 sm:mt-[52px] sm:grid-cols-[400px_664px] sm:gap-14">
+          <Image src={leadershipPortrait} alt="Ambar Ayade" className="h-[300px] w-full rounded-lg object-cover sm:h-[480px]" />
+          <div className="pt-2">
+            <h3 className="text-[22px] font-semibold text-[#122745] sm:text-[30px]">Ambar Ayade</h3>
+            <p className="mt-[14px] text-[14px] font-medium text-[#e8611a] sm:text-[16px]">Managing Director &amp; CEO, Rural Enhancers Group</p>
+            <p className="mt-[14px] text-[14px] leading-[1.76] text-[#636363] sm:text-[16.5px]">Facilitator of India&apos;s first ECA-backed hospital; an integral part of the Maharashtra Chief Minister&apos;s “Country Desk” foreign-investment initiative since 2021, focused on bringing ECA-based investment to the state.</p>
+            <div className="mt-[14px]  rounded-lg border border-[#e4e8ef] bg-[#f8f7f5] px-4 py-5 text-[#636363] sm:px-6">
+              <div aria-hidden className="shrink-0  text-[18px] font-semibold leading-5 text-[#e8611a]">◷</div>
+              <div>
+                <p className="text-[14px] font-semibold text-[#122745] sm:text-[16px] mt-2">Team expanding</p>
+                <p className="mt-1 text-[14px] leading-[1.58] sm:text-[15px]">Full leadership bios — finance leadership and partner-institution representatives — are being finalized and will be published here.</p>
+              </div>
             </div>
           </div>
         </div>

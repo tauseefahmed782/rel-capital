@@ -1,3 +1,6 @@
+import Image from "next/image";
+import purposeIcon from "@/assets/icon-purpose.svg";
+
 const commitments = [
   {
     number: "01",
@@ -13,20 +16,20 @@ const commitments = [
 
 export function AboutVisionMission() {
   return (
-    <section className="bg-white px-6 py-20 lg:px-12 lg:py-28">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="bg-white px-5 py-14 sm:px-0 sm:py-[100px]">
+      <div className="mx-auto max-w-[1120px]">
         <div className="text-center">
-          <p className="flex items-center justify-center gap-2 text-sm font-medium text-[#f56619]"><span aria-hidden="true">♙</span> Our Purpose</p>
-          <h2 className="mt-5 text-4xl font-medium leading-tight tracking-tight text-[#112a4b] sm:text-5xl">Vision &amp; Mission</h2>
+          <p className="flex items-center justify-center gap-2 text-sm font-medium text-[#e8611a]"><Image src={purposeIcon} alt="" className="" width={20}  height={20} /> Our Purpose</p>
+          <h2 className="mt-3 text-[30px] font-medium leading-9 text-[#122745] sm:mt-5 sm:text-[54px] sm:leading-[64px]">Vision &amp; Mission</h2>
           <p className="mt-5 text-lg leading-7 text-neutral-600">Two commitments anchor everything we structure.</p>
         </div>
 
-        <div className="mt-14 grid gap-7 md:grid-cols-2">
+        <div className="mt-[26px] grid gap-4 sm:mt-14 sm:grid-cols-2 sm:gap-7">
           {commitments.map((commitment) => (
-            <article key={commitment.number} className="rounded-xl bg-[#f7f6f4] p-8 sm:p-11">
+            <article key={commitment.number} className="rounded-lg bg-[#f8f7f5] p-[30px_18px] sm:h-[278px] sm:p-11">
               <p className="text-sm font-bold text-[#f56619]">{commitment.number}</p>
-              <h3 className="mt-5 text-3xl font-medium tracking-tight text-[#112a4b]">{commitment.title}</h3>
-              <p className="mt-5 text-lg leading-8 text-neutral-600">{commitment.description}</p>
+              <h3 className="mt-4 text-[22px] font-medium text-[#122745] sm:mt-5 sm:text-3xl">{commitment.title}</h3>
+              <p className="mt-4 text-[15px] leading-6 text-[#636363] sm:mt-5 sm:text-lg sm:leading-8">{commitment.description}</p>
             </article>
           ))}
         </div>
