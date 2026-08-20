@@ -73,12 +73,12 @@ export function Footer() {
           Start a Conversation
         </Link>
 
-        <div className="mt-[18px] flex flex-wrap gap-x-6 gap-y-[30px]">
+        <div className="mt-[18px] flex gap-x-6 gap-y-[30px]">
           <FooterLinks />
         </div>
 
         <div className="mt-7 h-[172px] w-full max-w-[350px] overflow-hidden">
-          <Image src={footerMap} alt="Global presence map" className="h-full w-full object-cover object-center opacity-40" />
+          <Image src={footerMap} alt="Global presence map" className="h-full w-full object-cover object-center" />
         </div>
 
         <div className="text-center text-[13px] leading-5 text-[#191b1f]">
