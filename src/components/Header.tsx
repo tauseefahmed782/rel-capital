@@ -20,9 +20,9 @@ export function Header() {
 
   return (
     <header className="bg-[#122745] text-white">
-      <div className="mx-auto flex h-[62px] max-w-[1120px] items-center justify-between gap-8 px-5 sm:h-[67px] sm:px-0">
+      <div className="mx-auto flex h-[62px] w-full max-w-[1120px] items-center justify-between gap-4 px-4 sm:h-[67px] sm:px-8 lg:gap-8 lg:px-5 xl:px-0">
         <Link href="/" aria-label="Rural Enhancers home" className="shrink-0">
-          <Image src={logo} alt="Rural Enhancers" priority className="h-[26px] w-[126px] object-contain sm:h-[33px] sm:w-[161px]" />
+          <Image src={logo} alt="Rural Enhancers" priority className="h-[24px] w-[118px] object-contain sm:h-[33px] sm:w-[161px]" />
         </Link>
 
         <nav aria-label="Primary navigation" className="hidden items-center gap-6 lg:flex">
@@ -46,8 +46,8 @@ export function Header() {
           Contact
         </Link>
 
-        <div className="ml-auto flex items-center gap-[14px] lg:hidden">
-        <Link href="/contact" className="rounded-full bg-white px-4 py-[10px] text-[14px] leading-[18px] text-[#122745]">Contact</Link>
+        <div className="ml-auto flex items-center gap-2 sm:gap-[14px] lg:hidden">
+        <Link href="/contact" className="hidden rounded-full bg-white px-4 py-[10px] text-[14px] leading-[18px] text-[#122745] sm:block">Contact</Link>
         <button
           type="button"
           onClick={() => setMenuOpen((open) => !open)}

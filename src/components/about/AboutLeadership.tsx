@@ -4,14 +4,14 @@ import leadershipIcon from "@/assets/icon-leadership.svg";
 
 export function AboutLeadership() {
   return (
-    <section className="bg-white px-5 py-14 sm:px-0 sm:py-[100px]">
+    <section className="bg-white px-5 py-14 sm:px-8 sm:py-[100px] lg:px-0">
       <div className="mx-auto max-w-[1120px]">
         <p className="flex items-center gap-2 text-sm font-medium text-[#e8611a]"><Image src={leadershipIcon} alt="" className="" width={20} height={20} /> Leadership</p>
-        <h2 className="mt-3 max-w-[760px] text-[30px] font-medium leading-9 text-[#122745] sm:mt-5 sm:text-[54px] sm:leading-[64px]">Experienced hands on complex capital.</h2>
+        <h2 className="mt-3 w-full max-w-[760px] break-words text-[30px] font-medium leading-9 text-[#122745] sm:mt-5 sm:text-[44px] sm:leading-[1.15] lg:text-[54px] lg:leading-[64px]">Experienced hands on complex capital.</h2>
         <p className="mt-5 max-w-[760px] text-[15px] leading-[1.62] text-[#636363] sm:text-[17px]">REL Capital is led by a team combining decades of experience in project finance, government partnerships, export-credit structuring, and healthcare and infrastructure delivery.</p>
 
-        <div className="mt-[26px] grid items-start gap-5 sm:mt-[52px] sm:grid-cols-[400px_664px] sm:gap-14">
-          <Image src={leadershipPortrait} alt="Ambar Ayade" className="h-[300px] w-full rounded-lg object-cover sm:h-[480px]" />
+        <div className="mt-[26px] grid items-start gap-5 sm:mt-[52px] lg:grid-cols-[minmax(320px,400px)_minmax(0,664px)] lg:gap-14">
+          <Image src={leadershipPortrait} alt="Ambar Ayade" className="h-[300px] w-full rounded-lg object-cover sm:h-[420px] lg:h-[480px]" />
           <div className="pt-2">
             <h3 className="text-[22px] font-semibold text-[#122745] sm:text-[30px]">Ambar Ayade</h3>
             <p className="mt-[14px] text-[14px] font-medium text-[#e8611a] sm:text-[16px]">Managing Director &amp; CEO, Rural Enhancers Group</p>

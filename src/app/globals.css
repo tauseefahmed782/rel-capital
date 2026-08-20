@@ -5,4 +5,9 @@ body {
   background: #ffffff;
   color: #112a4b;
   font-family: Inter, sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
 }

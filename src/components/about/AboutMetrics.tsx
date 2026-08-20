@@ -3,76 +3,67 @@
 import { useEffect, useRef, useState } from "react";
 
 const metrics = [
-  { prefix: "€", value: 43, suffix: "M", detail: "India's first ECA-backed hospital — PMC Warje, Pune" },
-  { prefix: "₹", value: 10000, suffix: " Cr", detail: "Investment MoU with the Government of Maharashtra, WEF Davos" },
-  { prefix: "$", value: 2, suffix: " Billion", detail: "Maritime & port framework with Abu Dhabi Ports" },
-  { prefix: "", value: 5, suffix: " Sectors", detail: "Healthcare · Education · Water · Shipping · Renewables" },
+  { value: 43, prefix: "€", suffix: "M", detail: "India’s first ECA-backed hospital — PMC Warje, Pune" },
+  { value: 10000, prefix: "₹", suffix: " Cr", detail: "Investment MoU with the Government of Maharashtra, WEF Davos" },
+  { value: 2, prefix: "$", suffix: " Billion", detail: "Maritime & port framework with Abu Dhabi Ports" },
+  { value: 5, prefix: "", suffix: " Sectors", detail: "Healthcare · Education · Water · Shipping · Renewables" },
 ] as const;
 
-function useCountUp(target: number, shouldStart: boolean) {
+function AnimatedMetric({ metric, index }: { metric: (typeof metrics)[number]; index: number }) {
+  const elementRef = useRef<HTMLDivElement>(null);
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    if (!shouldStart) return;
-
-    const duration = 1800;
-    const startedAt = performance.now();
-    let animationFrame = 0;
-
-    const animate = (now: number) => {
-      const progress = Math.min((now - startedAt) / duration, 1);
-      const easedProgress = 1 - Math.pow(1 - progress, 3);
-      setCount(Math.round(target * easedProgress));
-      if (progress < 1) animationFrame = requestAnimationFrame(animate);
-    };
-
-    animationFrame = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(animationFrame);
-  }, [shouldStart, target]);
-
-  return count;
-}
-
-function Metric({ prefix, value, suffix, detail }: (typeof metrics)[number]) {
-  const metricRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-  const count = useCountUp(value, isVisible);
-
-  useEffect(() => {
-    const element = metricRef.current;
+    const element = elementRef.current;
     if (!element) return;
 
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setIsVisible(true);
+    let animationFrame = 0;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
         observer.disconnect();
-      }
-    }, { threshold: 0.3 });
+
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          setCount(metric.value);
+          return;
+        }
+
+        const duration = 1600;
+        const startTime = performance.now();
+        const animate = (now: number) => {
+          const progress = Math.min((now - startTime) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          setCount(Math.round(metric.value * eased));
+          if (progress < 1) animationFrame = requestAnimationFrame(animate);
+        };
+        animationFrame = requestAnimationFrame(animate);
+      },
+      { threshold: 0.25 },
+    );
 
     observer.observe(element);
-    return () => observer.disconnect();
-  }, []);
+    return () => {
+      observer.disconnect();
+      cancelAnimationFrame(animationFrame);
+    };
+  }, [metric.value]);
 
   return (
-    <div ref={metricRef}>
-      <p className="text-3xl font-semibold tracking-tight text-[#f56619]">
-        {prefix}{count.toLocaleString("en-IN")}{suffix}
+    <div ref={elementRef} className={`py-5 first:pt-0 last:pb-0 ${index > 0 ? "border-t border-[#d5dbe5] md:border-l md:border-t-0 md:pl-5 lg:pl-7" : ""} md:min-h-[113px] md:py-0`}>
+      <p className="text-[24px] font-semibold leading-normal text-[#e8611a] sm:text-[30px] lg:text-[42px]" aria-label={`${metric.prefix}${metric.value.toLocaleString("en-IN")}${metric.suffix}`}>
+        {metric.prefix}{count.toLocaleString("en-IN")}{metric.suffix}
       </p>
-      <p className="mt-3 max-w-[230px] text-sm leading-5 text-neutral-600">{detail}</p>
+      <p className="mt-[10px] max-w-[245px] text-[13px] leading-[1.4] text-[#636363] sm:text-[13.5px]">{metric.detail}</p>
     </div>
   );
 }
 
 export function AboutMetrics() {
   return (
-    <section className="bg-[#f7f6f4] px-6 py-10 lg:px-12">
-      <p className="mx-auto mb-7 max-w-[1240px] text-center text-xs text-slate-400">Figures reflect structured deals and Group commitments across the India–GCC–Europe corridor.</p>
-      <div className="mx-auto grid max-w-[1240px] gap-7 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0">
-        {metrics.map((metric, index) => (
-          <div key={metric.detail} className={`px-0 lg:px-6 ${index > 0 ? "lg:border-l lg:border-slate-300" : ""}`}>
-            <Metric {...metric} />
-          </div>
-        ))}
+    <section className="bg-[#f8f7f5] px-5 py-10 sm:px-8 sm:py-[72px] lg:px-0">
+      <p className="mx-auto mb-[18px] w-full max-w-[260px] break-words text-center text-[12px] leading-[1.4] text-[#8a94a4] sm:max-w-[760px] sm:text-[12.5px]">Figures reflect structured deals and Group commitments across the India–GCC–Europe corridor.</p>
+      <div className="mx-auto grid max-w-[1120px] grid-cols-1 gap-0 md:grid-cols-4">
+        {metrics.map((metric, index) => <AnimatedMetric key={metric.detail} metric={metric} index={index} />)}
       </div>
     </section>
   );
