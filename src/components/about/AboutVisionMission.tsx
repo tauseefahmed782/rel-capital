@@ -16,7 +16,7 @@ const commitments = [
 
 export function AboutVisionMission() {
   return (
-    <section className="bg-white px-5 py-14 sm:px-8 sm:py-[100px] lg:px-0">
+    <section className="bg-white px-[20px] py-[56px] md:py-[70px] lg:py-[100px]">
       <div className="mx-auto max-w-[1120px]">
         <div className="text-center">
           <p className="flex items-center justify-center gap-2 text-sm font-medium text-[#e8611a]"><Image src={purposeIcon} alt="" className="" width={20}  height={20} /> Our Purpose</p>

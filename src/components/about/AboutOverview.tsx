@@ -5,7 +5,7 @@ import aboutIcon from "@/assets/icon-about.svg";
 
 export function AboutOverview() {
   return (
-    <section className="bg-white px-5 py-14 sm:px-8 sm:py-[100px] lg:px-0">
+    <section className="bg-white px-[20px] py-[56px] md:py-[70px] lg:py-[100px]">
       <div className="mx-auto max-w-[1120px]">
         <p className="flex items-center gap-2 text-[14px] text-[#e8611a] sm:text-[15.5px]"><Image src={aboutIcon} alt="" className="" width={20} height={20} /> About REL Capital</p>
         <h2 className="mt-3 w-full max-w-[840px] break-words text-[30px] font-medium leading-[1.2] text-[#122745] sm:mt-5 sm:text-[44px] sm:leading-[1.15] lg:text-[54px] lg:leading-[64px]">Specialized by design, global by network.</h2>

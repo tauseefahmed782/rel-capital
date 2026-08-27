@@ -12,7 +12,7 @@ const principles = [
 
 export function AboutApproach() {
   return (
-    <section className="bg-[#f8f7f5] px-5 py-14 sm:px-8 sm:py-[100px] lg:px-0">
+    <section className="bg-[#f8f7f5] px-[20px] py-[56px] md:py-[70px] lg:py-[100px]">
       <div className="mx-auto max-w-[1120px]">
         <p className="flex items-center gap-2 text-sm font-medium text-[#e8611a]"><Image src={approachIcon} alt="" className="" width={20} height={20}/> Our Approach</p>
         <h2 className="mt-3 w-full break-words text-[30px] font-medium leading-9 text-[#122745] sm:mt-5 sm:text-[44px] sm:leading-[1.15] lg:text-[54px] lg:leading-[64px]">What sets us apart.</h2>

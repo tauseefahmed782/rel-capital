@@ -4,7 +4,7 @@ import leadershipIcon from "@/assets/icon-leadership.svg";
 
 export function AboutLeadership() {
   return (
-    <section className="bg-white px-5 py-14 sm:px-8 sm:py-[100px] lg:px-0">
+    <section className="bg-white px-[20px] py-[56px] md:py-[70px] lg:py-[100px]">
       <div className="mx-auto max-w-[1120px]">
         <p className="flex items-center gap-2 text-sm font-medium text-[#e8611a]"><Image src={leadershipIcon} alt="" className="" width={20} height={20} /> Leadership</p>
         <h2 className="mt-3 w-full max-w-[760px] break-words text-[30px] font-medium leading-9 text-[#122745] sm:mt-5 sm:text-[44px] sm:leading-[1.15] lg:text-[54px] lg:leading-[64px]">Experienced hands on complex capital.</h2>

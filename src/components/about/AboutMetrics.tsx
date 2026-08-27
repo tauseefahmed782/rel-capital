@@ -60,7 +60,7 @@ function AnimatedMetric({ metric, index }: { metric: (typeof metrics)[number]; i
 
 export function AboutMetrics() {
   return (
-    <section className="bg-[#f8f7f5] px-5 py-10 sm:px-8 sm:py-[72px] lg:px-0">
+    <section className="bg-[#f8f7f5] px-[20px] py-[56px] md:py-[70px] lg:py-[100px]">
       <p className="mx-auto mb-[18px] w-full max-w-[260px] break-words text-center text-[12px] leading-[1.4] text-[#8a94a4] sm:max-w-[760px] sm:text-[12.5px]">Figures reflect structured deals and Group commitments across the India–GCC–Europe corridor.</p>
       <div className="mx-auto grid max-w-[1120px] grid-cols-1 gap-0 md:grid-cols-4">
         {metrics.map((metric, index) => <AnimatedMetric key={metric.detail} metric={metric} index={index} />)}

@@ -13,7 +13,7 @@ const groupCompanies = [
 
 export function AboutHeritage() {
   return (
-    <section className="bg-[#f8f7f5] px-5 py-14 sm:px-8 sm:py-[100px] lg:px-0">
+    <section className="bg-[#f8f7f5] px-[20px] py-[56px] md:py-[70px] lg:py-[100px]">
       <div className="mx-auto grid max-w-[1120px] items-center gap-[26px] lg:grid-cols-[minmax(0,480px)_minmax(0,568px)] lg:gap-[72px]">
         <div className="order-2 rounded-lg border border-[#e4e8ef] bg-white px-[18px] py-[22px] sm:px-8 sm:py-[34px] lg:order-1 lg:min-h-[513px]">
           <p className="text-center text-[12px] font-semibold tracking-[.48px] text-[#98a4b6]">GROUP STRUCTURE</p>

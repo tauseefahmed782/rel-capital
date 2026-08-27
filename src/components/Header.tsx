@@ -47,7 +47,7 @@ export function Header() {
         </Link>
 
         <div className="ml-auto flex items-center gap-2 sm:gap-[14px] lg:hidden">
-        <Link href="/contact" className="hidden rounded-full bg-white px-4 py-[10px] text-[14px] leading-[18px] text-[#122745] sm:block">Contact</Link>
+        <Link href="/contact" className=" rounded-full bg-white px-4 py-[10px] text-[14px] leading-[18px] text-[#122745] sm:block">Contact</Link>
         <button
           type="button"
           onClick={() => setMenuOpen((open) => !open)}
@@ -81,6 +81,7 @@ export function Header() {
           <Link href="/" onClick={() => setMenuOpen(false)} aria-label="Rural Enhancers home">
             <Image src={logo} alt="Rural Enhancers" className="h-12 w-40 object-contain" />
           </Link>
+          
           <button
             type="button"
             onClick={() => setMenuOpen(false)}
@@ -104,13 +105,7 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <Link
-          href="/contact"
-          onClick={() => setMenuOpen(false)}
-          className="mt-8 rounded-full bg-white px-7 py-3 text-center text-[16px] font-normal text-[#112a4b]"
-        >
-          Contact
-        </Link>
+      
       </aside>
     </header>
   );
