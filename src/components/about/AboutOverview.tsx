@@ -14,7 +14,7 @@ export function AboutOverview() {
             <p>REL Capital is the specialized financial wing of the Rural Enhancers Group, dedicated to enabling structured financing solutions backed by trusted Export Credit Agencies. We connect borrowers with third-party guarantors and global financial partners to fund high-impact infrastructure and healthcare projects across the India–GCC–Europe corridor.</p>
             <p className="mt-[18px]">Where conventional lenders see risk, we engineer structure. By blending local project insight with a global network of export credit agencies, guarantors, and leading banks, we make ambitious public projects bankable — and we do it with the transparency, discipline, and regulatory rigor institutional partners demand.</p>
             <p className="mt-[18px]">Our frameworks reduce risk, ensure regulatory compliance, and accelerate project delivery. That is not a slogan; it is the record we have built.</p>
-            <Link href="/track-record" className="mt-7 inline-block rounded-full bg-[#e8611a] px-4 py-3 text-[14px] font-medium text-white sm:px-[30px] sm:py-4 sm:text-[16px]">See our track record</Link>
+            <Link href="/track-record" className="mt-7 inline-block rounded-full bg-[#e8611a] px-2 py-2 text-[14px] font-medium text-white sm:px-[30px] sm:py-4 sm:text-[16px]">See our track record</Link>
           </div>
           <Image src={shippingImage} alt="Container ships travelling across open water" className="order-1 h-[300px] w-full rounded-lg object-cover sm:h-[420px] lg:order-2 lg:h-[540px]" />
         </div>

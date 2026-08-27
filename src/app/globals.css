@@ -11,3 +11,135 @@ body {
 html {
   overflow-x: hidden;
 }
+
+.home-container {
+  width: min(1120px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.section-title {
+  font-size: clamp(2.15rem, 4.4vw, 4rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  font-weight: 500;
+}
+
+.body-copy {
+  color: #606970;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.clients-strip {
+  padding: 40px 0;
+  background: #F8F7F5;
+  color: #514e4b;
+}
+
+.clients-strip__inner {
+  display: grid;
+  grid-template-columns: 345px 775px;
+  align-items: center;
+  width: min(1120px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.clients-strip__label {
+  color: #636363;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.clients-strip__brands {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 32px;
+}
+
+.client-brand {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.client-brand__logo {
+  width: auto;
+  height: 24px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Tablets and smaller laptops retain the reference 3 × 2 logo layout. */
+@media (max-width: 1199px) {
+  .clients-strip {
+    padding: 33px 0 34px;
+  }
+
+  .clients-strip__inner {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .clients-strip__brands {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+    max-width: 700px;
+    gap: 20px 32px;
+    padding-left: 0;
+  }
+
+  .client-brand:nth-child(3n + 2) {
+    justify-content: center;
+  }
+
+  .client-brand:nth-child(3n) {
+    justify-content: flex-end;
+  }
+}
+
+/* Phones use the same composition at the compact Figma width. */
+@media (max-width: 767px) {
+  .clients-strip__brands {
+    max-width: 350px;
+    gap: 18px 12px;
+  }
+}
+
+/* Scale artwork gently on narrow phones instead of allowing overflow. */
+@media (max-width: 374px) {
+  .clients-strip__inner {
+    width: calc(100% - 32px);
+  }
+
+  .clients-strip__label {
+    max-width: 270px;
+    font-size: 13px;
+  }
+
+  .client-brand__logo {
+    height: auto;
+    max-height: 22px;
+  }
+}
+
+@media (max-width: 319px) {
+  .clients-strip__brands {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 240px;
+  }
+
+  .client-brand:nth-child(n) {
+    justify-content: flex-start;
+  }
+
+  .client-brand:nth-child(even) {
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-container { width: min(1120px, calc(100% - 80px)); }
+}
