@@ -60,7 +60,7 @@ function AnimatedMetric({ metric, index }: { metric: (typeof metrics)[number]; i
 
 export function HomeMatrix() {
   return (
-    <section className="bg-[#f8f7f5] px-[20px] py-10  sm:py-[72px] ">
+    <section className="bg-[#f8f7f5] px-[20px] py-[56px] md:py-[70px] lg:py-[100px]">
       <div className="mx-auto grid max-w-[1120px] grid-cols-1  gap-[24px] md:grid-cols-4">
         {metrics.map((metric, index) => <AnimatedMetric key={metric.detail} metric={metric} index={index} />)}
       </div>

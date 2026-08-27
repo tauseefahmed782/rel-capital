@@ -47,18 +47,16 @@ const whyRelItems = [
 
 const WhyRelSection = () => {
   return (
-    <section className="bg-white">
+    <section className="bg-white ">
       <div
         className="
           mx-auto
           w-full
           max-w-[1120px]
-          py-[60px]
+          py-[56px]
           px-[20px]
-          sm:py-[70px]
-       
-          md:py-[75px]
-          lg:py-[80px]
+          md:py-[70px]
+          lg:py-[100px]
         "
       >
         {/* ================= INTRO ================= */}
@@ -117,7 +115,7 @@ const WhyRelSection = () => {
             </p>
 
             {/* CTA */}
-                       <Link href="/track-record" className="mt-2 inline-block rounded-full bg-[#e8611a] py-3 text-[14px] font-medium text-white sm:px-[30px] sm:py-3 sm:text-[16px]">Start a conversation</Link>
+                       <Link href="/track-record" className="home-cta mt-2">Start a conversation</Link>
 
           </div>
         </div>

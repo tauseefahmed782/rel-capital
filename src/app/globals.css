@@ -30,8 +30,132 @@ html {
   line-height: 1.55;
 }
 
+.home-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #e8611a;
+  border-radius: 9999px;
+  background: #e8611a;
+  padding: 12px 30px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+  transition: opacity 200ms ease;
+}
+
+.home-cta:hover {
+  opacity: 0.9;
+}
+
+.home-cta--outline {
+  border-color: #fff;
+  background: transparent;
+  color: #fff;
+}
+
+.hero-marquee {
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  width: calc(100% + 40px);
+  margin-top: 44px;
+  margin-left: -20px;
+  color: #fff;
+  pointer-events: none;
+}
+
+.hero-marquee__track {
+  display: flex;
+  width: max-content;
+  animation: hero-marquee-scroll 28s linear infinite;
+  will-change: transform;
+}
+
+.hero-marquee__group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.hero-marquee__item {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: clamp(24px, 3vw, 44px);
+  padding-left: clamp(24px, 3vw, 44px);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  white-space: nowrap;
+}
+
+.hero-marquee__dot {
+  width: clamp(20px, 2.1vw, 30px);
+  height: clamp(20px, 2.1vw, 30px);
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #e8611a;
+}
+
+@keyframes hero-marquee-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (hover: hover) {
+  .hero-marquee:hover .hero-marquee__track {
+    animation-play-state: paused;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-marquee__track {
+    animation-duration: 22s;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-marquee {
+    margin-top: 70px;
+  }
+
+  .hero-marquee__item {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-marquee {
+    margin-top: 96px;
+  }
+
+  .hero-marquee__item {
+    font-size: 96px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-marquee__track {
+    animation: none;
+  }
+}
+
+@media (min-width: 640px) {
+  .home-cta {
+    font-size: 16px;
+  }
+}
+
 .clients-strip {
-  padding: 40px 0;
+  padding: 40px 20px;
   background: #F8F7F5;
   color: #514e4b;
 }
@@ -40,7 +164,7 @@ html {
   display: grid;
   grid-template-columns: 345px 775px;
   align-items: center;
-  width: min(1120px, calc(100% - 40px));
+  width: min(1120px, 100%);
   margin-inline: auto;
 }
 
@@ -74,7 +198,7 @@ html {
 /* Tablets and smaller laptops retain the reference 3 × 2 logo layout. */
 @media (max-width: 1199px) {
   .clients-strip {
-    padding: 33px 0 34px;
+    padding: 40px 20px;
   }
 
   .clients-strip__inner {
@@ -102,41 +226,13 @@ html {
 
 /* Phones use the same composition at the compact Figma width. */
 @media (max-width: 767px) {
+  .clients-strip {
+    padding: 32px 20px;
+  }
+
   .clients-strip__brands {
     max-width: 350px;
     gap: 18px 12px;
-  }
-}
-
-/* Scale artwork gently on narrow phones instead of allowing overflow. */
-@media (max-width: 374px) {
-  .clients-strip__inner {
-    width: calc(100% - 32px);
-  }
-
-  .clients-strip__label {
-    max-width: 270px;
-    font-size: 13px;
-  }
-
-  .client-brand__logo {
-    height: auto;
-    max-height: 22px;
-  }
-}
-
-@media (max-width: 319px) {
-  .clients-strip__brands {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    max-width: 240px;
-  }
-
-  .client-brand:nth-child(n) {
-    justify-content: flex-start;
-  }
-
-  .client-brand:nth-child(even) {
-    justify-content: flex-end;
   }
 }
 

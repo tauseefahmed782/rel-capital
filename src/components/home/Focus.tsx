@@ -1,13 +1,20 @@
 import Image from "next/image";
 import aboutIcon from "@/assets/icon-heritage.svg";
 import healthcare from "@/assets/healthcare.png";
-import ecaIcon from "@/assets/eca.svg";
-import structuredIcon from "@/assets/finaincial.svg";
-import sectorIcon from "@/assets/sector-focused.svg";
-import globalIcon from "@/assets/partnership.svg";
-import sustainableIcon from "@/assets/growth.svg";
 import Link from "next/link";
 import healthicon from "@/assets/icon-heart.svg"
+import eductaion from "@/assets/education.jpg";
+import educationicon from "@/assets/icon-education.svg"
+import sanitationIcon  from "@/assets/icon-water.svg"
+import sanitation from "@/assets/water.jpg";
+import shippingIcon from "@/assets/icon-shipping.svg"
+import shipping from "@/assets/shipping.jpg";
+import energyIcon from "@/assets/icon-enrgy.svg"
+import energy from "@/assets/renewable.jpg";
+import infrastructureIcon from "@/assets/Infrastructure.jpg"
+import infrastructure from "@/assets/icon-infrastructure.svg";
+
+
 const whyRelItems = [
   {
     id: "eca",
@@ -22,35 +29,40 @@ const whyRelItems = [
     title: "Education",
     description:
       "Educational and digital-learning infrastructure that expands access and modernizes delivery.",
-    icon: structuredIcon,
+    image: eductaion,
+    icon:educationicon,
   },
   {
     id: "sector",
     title: "Water & Sanitation",
     description:
       "Desalination, water treatment, and sanitation — the infrastructure everything else depends on.",
-    icon:sectorIcon,
+    icon:sanitationIcon,
+    image:sanitation,
   },
   {
     id: "global",
     title: "Shipping & Ports",
     description:
       "Ports, terminals, shipbuilding, and maritime infrastructure that build the blue economy.",
-    icon:globalIcon,
+    icon:shippingIcon,
+    image:shipping,
   },
   {
-    id: "sustainable",
+    id: "energy",
     title: "Renewable Energy",
     description:
       "Solar and clean-energy projects — the fastest-growing category of ECA support worldwide.",
-    icon: sustainableIcon,
+    icon: energyIcon,
+    image:energy,
   },
   {
-    id: "sustainable",
+    id: "Infrastructure",
     title: "Infrastructure",
     description:
       "Allied infrastructure — housing, urban and social development — where ECA-backed models apply.",
-    icon: sustainableIcon,
+    icon:infrastructure ,
+    image: infrastructureIcon,
   },
 ];
 
@@ -62,12 +74,10 @@ const FocusArea = () => {
           mx-auto
           w-full
           max-w-[1120px]
-          py-[60px]
+          py-[56px]
           px-[20px]
-          sm:py-[70px]
-       
-          md:py-[75px]
-          lg:py-[80px]
+          md:py-[70px]
+          lg:py-[100px]
         "
       >
         {/* ================= INTRO ================= */}
@@ -125,7 +135,7 @@ it changes lives.
             </p>
 
             {/* CTA */}
-                       <Link href="/track-record" className="mt-2 inline-block rounded-full bg-[#e8611a] py-3 text-[14px] font-medium text-white sm:px-[30px] sm:py-3 sm:text-[16px]">Explore our sectors</Link>
+                       <Link href="/track-record" className="home-cta mt-2">Explore our sectors</Link>
 
           </div>
         </div>
@@ -151,14 +161,22 @@ it changes lives.
           "
         >
           {whyRelItems.map((item) => (
-            <div
+            <article
               key={item.id}
-             
+              className="flex min-w-0 flex-col"
             >
-                            <Image src={item.image} className="rounded-[8px]"  width={360} height={250}/>
+              <div className="relative aspect-[36/25] w-full overflow-hidden rounded-[8px]">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  sizes="(max-width: 639px) calc(100vw - 40px), (max-width: 1023px) calc(50vw - 30px), 360px"
+                  className="object-cover"
+                />
+              </div>
 
               {/* Figma SVG Icon */}
-              <div className=" bg-[#F8F7F5]
+              <div className=" flex-1 bg-[#F8F7F5]
                 px-[20px]
                 py-[20px]
                 mt-2
@@ -205,7 +223,7 @@ it changes lives.
               </p>
                 </div>
              
-            </div>
+            </article>
           ))}
         </div>
       </div>

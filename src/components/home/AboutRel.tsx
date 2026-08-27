@@ -48,9 +48,10 @@ const AboutSection = () => {
 
           items-center
           justify-center
-          px-6
-          py-16
-          md:px-10
+          px-[20px]
+          py-[56px]
+          md:py-[70px]
+          lg:py-[100px]
         "
       >
         <div className="w-full  text-center">
@@ -100,10 +101,10 @@ const AboutSection = () => {
               text-[14px]
               font-medium
               leading-[22px]
-              lg:text-[15px]
               text-[#E8611A]
               transition-opacity
               hover:opacity-70
+              lg:text-[15px]
             "
           >
             More about our heritage

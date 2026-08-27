@@ -48,16 +48,9 @@ const OurRole = () => {
           w-full
           max-w-[1120px]
           px-[20px]
-          py-[60px]
-
-          sm:px-[28px]
-          sm:py-[70px]
-
-          md:px-[35px]
-          md:py-[75px]
-
-          lg:px-0
-          lg:py-[80px]
+          py-[56px]
+          md:py-[70px]
+          lg:py-[100px]
         "
       >
         {/* ================= HEADER ================= */}
@@ -116,25 +109,7 @@ const OurRole = () => {
           {/* CTA */}
           <a
             href="#"
-            className="
-              mt-[18px]
-              inline-flex
-              items-center
-              justify-center
-              rounded-full
-              bg-[#e8611a]
-              px-[30px]
-              py-3
-              text-[14px]
-              font-medium
-              leading-normal
-              text-white
-              transition-opacity
-              duration-200
-              hover:opacity-90
-
-              sm:text-[16px]
-            "
+            className="home-cta mt-[18px]"
           >
             See how we work
           </a>
