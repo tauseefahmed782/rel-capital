@@ -1,5 +1,5 @@
 import Image from "next/image";
-import aboutIcon from "@/assets/icon-heritage.svg";
+import focusIcon from "@/assets/icon-focus.svg";
 import healthcare from "@/assets/healthcare.png";
 import Link from "next/link";
 import healthicon from "@/assets/icon-heart.svg"
@@ -100,7 +100,7 @@ const FocusArea = () => {
           <div>
             {/* Label */}
             <div className="mb-[10px] ">
-                                <p className="flex items-center gap-2 text-[14px] text-[#e8611a] sm:text-[15.5px]"><Image src={aboutIcon} alt="" className="" width={20} height={20} /> Focus Areas</p>
+                                <p className="flex items-center gap-2 text-[14px] text-[#e8611a] sm:text-[15.5px]"><Image src={focusIcon} alt="" className="" width={20} height={20} /> Focus Areas</p>
 
             </div>
 
@@ -183,21 +183,21 @@ it changes lives.
                   rounded-[8px]
                 ">
 
-                     <div className="mb-[10px]">
+                     <div className="mb-[17px]">
                 <Image
                   src={item.icon}
                  
                   alt=""
-                   width={24}
-          height={24}
-                  className="h-[24px] w-[24px]"
+                   width={20}
+          height={20}
+               
                 />
               </div>
 
               {/* Title */}
               <h3
                 className="
-                  mb-[6px]
+                  mb-[10px]
                   text-[15px]
                   lg:text-[18px]
                   font-medium

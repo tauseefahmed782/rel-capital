@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { ContactIntro } from "@/components/contact/ContactIntro";
 import { ContactEnquiry } from "@/components/contact/ContactEnquiry";
 import { ContactFaq } from "@/components/contact/ContactFaq";
+import { ContactBnner } from "@/components/contact/ConatctBanner";
 
 export default function ContactPage() {
   return (
@@ -10,6 +11,7 @@ export default function ContactPage() {
       <ContactIntro />
       <ContactEnquiry />
       <ContactFaq />
+      <ContactBnner/>
     </main>
   );
 }

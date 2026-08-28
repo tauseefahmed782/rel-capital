@@ -7,9 +7,9 @@ import investorImg from "@/assets/investors.png";
 
 // Figma icons
 import presenceIcon from "@/assets/icon-presence.svg";
-import borrowerIcon from "@/assets/eca.svg";
-import guarantorIcon from "@/assets/finaincial.svg";
-import investorIcon from "@/assets/sector-focused.svg";
+import borrowerIcon from "@/assets/icon-borrowers.svg";
+import guarantorIcon from "@/assets/icon-guarantor.svg";
+import investorIcon from "@/assets/icon-investor.svg";
 
 
 const roleItems = [
@@ -179,9 +179,9 @@ const OurRole = () => {
                   <Image
                     src={item.icon}
                     alt=""
-                    width={24}
-                    height={35}
-                    className="h-[26px] w-[26px]"
+                    width={20}
+                    height={20}
+                    className=""
                   />
                 </div>
 

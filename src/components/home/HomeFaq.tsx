@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import plusIcon from "@/assets/plus-icon.svg";
+import faqIcon from "@/assets/icon-faq.svg";
 import minusIcon from "@/assets/minus-cion.svg";
 
 const faqItems = [
@@ -46,15 +47,7 @@ export default function HomeFaq() {
     <section className="bg-[#F8F7F5]">
       <div className="mx-auto grid w-full max-w-[1120px] gap-[42px] px-[20px] py-[56px] md:py-[70px] lg:grid-cols-[1fr_1fr] lg:gap-[80px] lg:py-[100px]">
         <div>
-          <p className="flex items-center gap-2 text-[14px] text-[#e8611a] sm:text-[15.5px]">
-            <span
-              aria-hidden="true"
-              className="grid h-[18px] w-[18px] place-items-center rounded-full border border-[#636363] text-[12px] font-medium leading-none text-[#636363]"
-            >
-              ?
-            </span>
-            FAQs
-          </p>
+                            <p className="flex items-center gap-2 text-[14px] text-[#e8611a] sm:text-[15.5px]"><Image src={faqIcon} alt="" className="" width={20} height={20} /> FAQ</p>
 
           <h2 className="mt-[10px] max-w-[480px] text-[30px] font-medium leading-normal tracking-[-1.5px] text-[#122745] sm:text-[42px] md:leading-[1.12] lg:text-[53px]">
             Frequently asked questions

@@ -43,7 +43,7 @@ export default function HowEcaWorks() {
                 alt=""
                 width={20}
                 height={20}
-                className="h-5 w-5"
+                className=""
               />
               The Mechanism
             </p>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import mechanismIcon from "@/assets/icon-heritage.svg";
+import mechanismIcon from "@/assets/icon-leadership.svg";
 import hospitalImage from "@/assets/project-01.jpg";
 import davosImage from "@/assets/project-02.jpg";
 import portsImage from "@/assets/project-03.jpg";
@@ -42,7 +42,7 @@ export default function ProvenDelivery() {
                 alt=""
                 width={20}
                 height={20}
-                className="h-5 w-5"
+                className=""
               />
             Proven Delivery
             </p>
@@ -78,10 +78,9 @@ finance. We’ve closed it.
                 alt={item.title}
                 fill
                 sizes="(max-width: 639px) calc(100vw - 40px), (max-width: 1023px) calc(50vw - 30px), 360px"
-                className={`-z-20 object-cover transition-transform duration-500 group-hover:scale-[1.03] ${item.imagePosition}`}
+                className={`-z-20 object-cover transition-transform duration-500  ${item.imagePosition}`}
               />
 
-              <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#0c1e38]/95 via-[#0c1e38]/35 to-[#0c1e38]/10" />
               <div className="absolute inset-x-0 bottom-0 p-[20px] sm:p-[22px] lg:p-[24px]">
                 <h3 className="text-[16.5px] lg:text-[20px] font-semibold leading-[1.2] text-white">
                   {item.title}

@@ -10,9 +10,9 @@ import Link from "next/link";
 const whyRelItems = [
   {
     id: "eca",
-    title: "ECA-Backed Solutions",
+    title: "Project & Sponsor",
     description:
-      "Access to low-risk, cost-effective financing through the world's most trusted export credit agencies.",
+      "A government body or developer defines a high-impact project.",
     icon: ecaIcon,
   },
   {
@@ -45,7 +45,7 @@ const whyRelItems = [
   },
 ];
 
-const WhyRelSection = () => {
+const Mechanism = () => {
   return (
     <section className="bg-white ">
       <div
@@ -79,13 +79,13 @@ const WhyRelSection = () => {
           <div>
             {/* Label */}
             <div className="mb-[10px] ">
-                                <p className="flex items-center gap-2 text-[14px] text-[#e8611a] sm:text-[15.5px]"><Image src={aboutIcon} alt="" className="" width={20} height={20} /> Why REL Capital</p>
+                                <p className="flex items-center gap-2 text-[14px] text-[#e8611a] sm:text-[15.5px]"><Image src={aboutIcon} alt="" className="" width={20} height={20} /> The Mechanism</p>
 
             </div>
 
             {/* Heading */}
             <h2  className=" mb-[12px]  font-medium leading-[1.15] tracking-[-1.5px] text-[#122745]  text-[30px] font-medium leading-normal sm:text-[42px] lg:text-[53px] md:leading-[1.12]">
-              Where global capital meets local delivery.
+             The mechanism, step by step.
             </h2>
           </div>
 
@@ -101,7 +101,6 @@ const WhyRelSection = () => {
           >
             <p
               className="
-                max-w-[310px]
                 text-[14px]
                 lg:text-[15px]
                 font-normal
@@ -109,13 +108,11 @@ const WhyRelSection = () => {
                 text-[#636363]
               "
             >
-              We combine ECA-backed structuring, disciplined execution, and
-              deep sector expertise to make ambitious public projects
-              bankable.
+             The five stages that take a project from sponsor to bankable, delivered reality.
             </p>
 
             {/* CTA */}
-                       <Link href="/track-record" className="home-cta mt-2">Start a conversation</Link>
+                       <Link href="/track-record" className="home-cta mt-[20px]">Understand our solutions  →</Link>
 
           </div>
         </div>
@@ -198,4 +195,4 @@ const WhyRelSection = () => {
   );
 };
 
-export default WhyRelSection;
+export default Mechanism;
