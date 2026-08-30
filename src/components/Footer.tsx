@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import footerLogo from "@/assets/footer-logo.png";
 import footerMap from "@/assets/Footer.png";
@@ -78,11 +78,11 @@ export function Footer() {
           <FooterLinks />
         </div>
 
-        <div className="mt-7  lg:w-full sm:w-full w-full">
+        <div className="mt-7  lg:w-[250px] sm:w-full w-full ">
           <Image src={footerMobileMap} alt="Global presence map" className="h-full w-full object-contain object-center" />
         </div>
 
-        <div className="text-center text-[13px] leading-5 text-[#191b1f]">
+        <div className="text-center text-[13px]  leading-5 text-[#191b1f]">
           <p className="font-bold uppercase text-[#122745]">India</p>
           <p className="mt-4">
             Ph : (+1) 631-366-7600
@@ -104,7 +104,7 @@ export function Footer() {
           </Link>
 
           <div>
-            <div className="aspect-[572/281] w-full overflow-hidden lg:w-[572px]">
+            <div className="aspect-[572/281] w-full overflow-hidden lg:w-[500px]">
               <Image src={footerMap} alt="Global presence map" className="h-full w-full object-cover object-center " />
             </div>
 
