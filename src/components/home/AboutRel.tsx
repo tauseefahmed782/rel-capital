@@ -2,6 +2,7 @@ import Image from "next/image";
 import linevector from "@/assets/linevector.png";
 import aboutrel from "@/assets/hero-about-img.png";
 import aboutIcon from "@/assets/icon-about.svg";
+import arrowIcon from "@/assets/icon-arrow.svg";
 
 const AboutSection = () => {
   return (
@@ -108,7 +109,7 @@ const AboutSection = () => {
             "
           >
             More about our heritage
-            <span className="ml-[5px] text-[18px]">→</span>
+            <Image src={arrowIcon} alt="" width={12} height={10} className="ml-[5px]" />
           </a>
         </div>
       </div>

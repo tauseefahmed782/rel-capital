@@ -71,7 +71,7 @@ export function SectorsList() {
             alt=""
             width={20}
             height={20}
-            className="h-[16px] w-[16px] opacity-65"
+           
           />
           Sectors
         </p>
@@ -108,13 +108,13 @@ export function SectorsList() {
                 </div>
               </div>
 
-              <div className="relative mt-[24px] aspect-[384/210] overflow-hidden rounded-[8px] sm:mt-0 sm:aspect-auto sm:h-[210px] lg:h-[210px]">
+              <div className="relative mt-[24px] aspect-[384/282] overflow-hidden rounded-[8px] sm:mt-0 sm:aspect-auto sm:h-[210px] lg:h-[282px]">
                 <Image
                   src={sector.image}
                   alt=""
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 1024px) 384px, (min-width: 640px) 50vw, 100vw"
+                  
+                  className=""
+                width={384} height={384}
                 />
               </div>
 

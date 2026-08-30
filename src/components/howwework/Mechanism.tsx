@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import mechanismIcon from "@/assets/icon-heritage.svg";
+import arrowIcon from "@/assets/icon-arrow.svg";
 
 const mechanismSteps = [
   {
@@ -53,7 +54,7 @@ const Mechanism = () => {
                 alt=""
                 width={20}
                 height={20}
-                className="h-[16px] w-[16px] opacity-65"
+                className=""
               />
               The Mechanism
             </p>
@@ -73,7 +74,8 @@ const Mechanism = () => {
               href="/track-record"
               className="home-cta mt-[16px] !rounded-[30px] !px-[16px] !py-[10px] !text-[14px] !font-medium !leading-none sm:mt-[20px] sm:!px-[30px] sm:!py-[12px] sm:!text-[16px]"
             >
-              Understand our solutions&nbsp;&rarr;
+              Understand our solutions
+              <Image src={arrowIcon} alt="" width={12} height={10} className="ml-2 brightness-0 invert" />
             </Link>
           </div>
         </div>
@@ -86,7 +88,7 @@ const Mechanism = () => {
             >
               <p className="text-[16.5px] font-semibold leading-none text-[#e8611a] sm:text-[22px]">
                 {step.eyebrow === "arrow" ? (
-                  <span aria-hidden="true">&rarr;</span>
+                  <Image src={arrowIcon} alt="" width={12} height={10} />
                 ) : (
                   step.eyebrow
                 )}

@@ -34,7 +34,7 @@ const WhyItWorks = () => {
             alt=""
             width={20}
             height={20}
-            className="h-[16px] w-[16px] opacity-65"
+            className=""
           />
           Why It Works
         </p>

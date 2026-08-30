@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import roleIcon from "@/assets/icon-heritage.svg";
+import arrowIcon from "@/assets/icon-arrow.svg";
 
 const borrowerBenefits = [
   "ECA and other backed FDI borrowing facilitation",
@@ -21,7 +22,7 @@ const BorrowersRole = () => {
               alt=""
               width={20}
               height={20}
-              className="h-[16px] w-[16px] opacity-65"
+            
             />
             Our Role &mdash; For Borrowers
           </p>
@@ -46,7 +47,8 @@ const BorrowersRole = () => {
             href="/contact"
             className="mt-[20px] inline-flex items-center text-[14px] font-medium leading-none text-[#e8611a] transition-opacity hover:opacity-80 sm:text-[16px]"
           >
-            Discuss a borrower mandate&nbsp;&rarr;
+            Discuss a borrower mandate
+            <Image src={arrowIcon} alt="" width={12} height={10} className="ml-2" />
           </Link>
         </div>
 

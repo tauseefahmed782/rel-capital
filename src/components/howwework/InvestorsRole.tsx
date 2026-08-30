@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import roleIcon from "@/assets/icon-heritage.svg";
+import arrowIcon from "@/assets/icon-arrow.svg";
 
 const investorBenefits = [
   "Access to a vetted pipeline of bankable projects",
@@ -20,7 +21,7 @@ const InvestorsRole = () => {
               alt=""
               width={20}
               height={20}
-              className="h-[16px] w-[16px] opacity-65"
+             
             />
             Our Role &mdash; For Investors
           </p>
@@ -42,7 +43,8 @@ const InvestorsRole = () => {
             href="/contact"
             className="mt-[20px] inline-flex items-center text-[14px] font-medium leading-none text-[#e8611a] transition-opacity hover:opacity-80 sm:text-[16px]"
           >
-            Request the investor brief&nbsp;&rarr;
+            Request the investor brief
+            <Image src={arrowIcon} alt="" width={12} height={10} className="ml-2" />
           </Link>
         </div>
 
